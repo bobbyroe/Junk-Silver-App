@@ -11,14 +11,15 @@
 @interface denominationItem : NSObject
 
 @property (assign) int numCoins;
-@property (assign) NSString *denominationName;
+@property (strong,nonatomic) NSString *denominationName;
 @property (assign) CGFloat totalValue;
-@property (assign) NSString *totalValueString;
 @property (assign) int denomIndex;
-
 @property (assign) float silverInOz;
 @property (assign) float estimatedMarkup;
-@property (strong,nonatomic) NSArray *myCoins;
+
+@property (strong,nonatomic) NSMutableArray *myCoins;
+
+// @property (assign) NSString *totalValueString;
 // @property (assign) int numDifferentCoins;
 
 @end

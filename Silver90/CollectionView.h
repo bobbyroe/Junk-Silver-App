@@ -14,7 +14,6 @@
 {
     NSMutableDictionary *selectedIndexes;
     NSMutableArray *denominationItems;
-    NSMutableArray *cellHeightMults;
     NSMutableArray *collectionCells;
     
 }
@@ -47,8 +46,6 @@
 - (void)divideCoinListByDenomination:(NSArray *)mainCoinArray;
 - (int)cellHeightMult:(NSIndexPath *)indexPath;
 - (void)setSpotValue:(CGFloat)theValue;
-- (void)initializeValueLabels;
-// - (void)initTable;
 
 - (void)updateCollectionTotalValue;
 @end

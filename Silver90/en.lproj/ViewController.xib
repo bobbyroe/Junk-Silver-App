@@ -856,7 +856,7 @@
 								<string key="NSFrameSize">{320, 459}</string>
 								<reference key="NSSuperview" ref="337801173"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="876582778"/>
+								<reference key="NSNextKeyView" ref="920123566"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -868,7 +868,7 @@
 								<string key="NSFrame">{{14, 31}, {205, 73}}</string>
 								<reference key="NSSuperview" ref="337801173"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="725540553"/>
+								<reference key="NSNextKeyView" ref="876582778"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -893,7 +893,7 @@
 								<string key="NSFrame">{{20, 139}, {280, 320}}</string>
 								<reference key="NSSuperview" ref="337801173"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="920123566"/>
+								<reference key="NSNextKeyView" ref="725540553"/>
 								<string key="NSReuseIdentifierKey">_NS:418</string>
 								<reference key="IBUIBackgroundColor" ref="5084072"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -933,7 +933,7 @@
 								<reference key="IBUIFont" ref="852704948"/>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 459}</string>
+						<string key="NSFrame">{{0, 460}, {320, 459}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="814179515"/>
@@ -6115,7 +6115,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="handleCollectionTouch">id</string>
 						<string key="handleInfoTouch">id</string>
-						<string key="handleTouchFrom:">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="handleCollectionTouch">
@@ -6125,10 +6124,6 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<object class="IBActionInfo" key="handleInfoTouch">
 							<string key="name">handleInfoTouch</string>
 							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="handleTouchFrom:">
-							<string key="name">handleTouchFrom:</string>
-							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
