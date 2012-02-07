@@ -11,6 +11,7 @@
 @interface denominationItem : NSObject
 
 @property (assign) int numCoins;
+@property (strong,nonatomic) NSString *numCoinsString;
 @property (strong,nonatomic) NSString *denominationName;
 @property (assign) CGFloat totalValue;
 @property (assign) int denomIndex;

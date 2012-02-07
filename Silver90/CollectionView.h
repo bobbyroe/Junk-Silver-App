@@ -15,6 +15,7 @@
     NSMutableDictionary *selectedIndexes;
     NSMutableArray *denominationItems;
     NSMutableArray *collectionCells;
+    NSArray *coinCounts;
     
 }
 @property (strong, nonatomic) IBOutlet UILabel *value;
@@ -34,7 +35,7 @@
 - (BOOL)saveCollectionData;
 - (void)fetchCollectionData;
 
-- (void)updateLabels:(int)denomIndex;
+- (void)updateLabels;
 - (void)addButtonToKeyboard;
 
 - (BOOL)cellIsSelected:(NSIndexPath *)indexPath;
