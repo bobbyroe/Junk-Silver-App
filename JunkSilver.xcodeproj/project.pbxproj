@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C07F978148191C600D400E7 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C07F977148191C600D400E7 /* FileHelpers.m */; };
+		4C1194541466D6EA00372D20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194531466D6EA00372D20 /* UIKit.framework */; };
+		4C1194561466D6EA00372D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194551466D6EA00372D20 /* Foundation.framework */; };
+		4C1194581466D6EA00372D20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194571466D6EA00372D20 /* CoreGraphics.framework */; };
+		4C11945E1466D6EA00372D20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C11945C1466D6EA00372D20 /* InfoPlist.strings */; };
+		4C1194601466D6EA00372D20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C11945F1466D6EA00372D20 /* main.m */; };
+		4C1194641466D6EA00372D20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1194631466D6EA00372D20 /* AppDelegate.m */; };
+		4C1194671466D6EA00372D20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1194661466D6EA00372D20 /* ViewController.m */; };
+		4C11946A1466D6EA00372D20 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194681466D6EA00372D20 /* ViewController.xib */; };
+		4C1194871466DBDD00372D20 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194861466DBDD00372D20 /* OpenGLES.framework */; };
+		4C11948A1466DBE200372D20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194891466DBE200372D20 /* QuartzCore.framework */; };
+		4C11948C1466DBF300372D20 /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C11948B1466DBF300372D20 /* NinevehGL.framework */; };
+		4C1194B31466E48700372D20 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AC1466E48700372D20 /* Default.png */; };
+		4C1194B41466E48700372D20 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AD1466E48700372D20 /* Default@2x.png */; };
+		4C1194B51466E48700372D20 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AE1466E48700372D20 /* icon114x114.png */; };
+		4C1194B61466E48700372D20 /* icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AF1466E48700372D20 /* icon57x57.png */; };
+		4C1194C71466EA0700372D20 /* coinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1194C61466EA0700372D20 /* coinView.m */; };
+		4C1195181467037700372D20 /* Dime_Barber_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194FD1467037700372D20 /* Dime_Barber_NRM.png */; };
+		4C1195191467037700372D20 /* Dime_Mercury_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194FE1467037700372D20 /* Dime_Mercury_NRM.png */; };
+		4C11951A1467037700372D20 /* dime_Roosevelt_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194FF1467037700372D20 /* dime_Roosevelt_NRM.png */; };
+		4C11951B1467037700372D20 /* Dollar_Eisenhower_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195001467037700372D20 /* Dollar_Eisenhower_NRM.png */; };
+		4C11951C1467037700372D20 /* Dollar_Morgan_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195011467037700372D20 /* Dollar_Morgan_NRM.png */; };
+		4C11951D1467037700372D20 /* dollar_Peace_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195021467037700372D20 /* dollar_Peace_NRM.png */; };
+		4C11951E1467037700372D20 /* Half_Barber_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195031467037700372D20 /* Half_Barber_NRM.png */; };
+		4C11951F1467037700372D20 /* half_Franklyn_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195041467037700372D20 /* half_Franklyn_NRM.png */; };
+		4C1195201467037700372D20 /* Half_Kennedy_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195051467037700372D20 /* Half_Kennedy_NRM.png */; };
+		4C1195211467037700372D20 /* Half_Liberty_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195061467037700372D20 /* Half_Liberty_NRM.png */; };
+		4C1195221467037700372D20 /* Quarter_Barber_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195071467037700372D20 /* Quarter_Barber_NRM.png */; };
+		4C1195231467037700372D20 /* quarter_liberty_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195081467037700372D20 /* quarter_liberty_NRM.png */; };
+		4C1195241467037700372D20 /* Quarter_Washinton_NRM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195091467037700372D20 /* Quarter_Washinton_NRM.png */; };
+		4C1195251467037700372D20 /* Dime_Barber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C11950B1467037700372D20 /* Dime_Barber.jpg */; };
+		4C1195261467037700372D20 /* Dime_Mercury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C11950C1467037700372D20 /* Dime_Mercury.jpg */; };
+		4C1195271467037700372D20 /* dime_Roosevelt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C11950D1467037700372D20 /* dime_Roosevelt.jpg */; };
+		4C1195281467037700372D20 /* Dollar_Eisenhower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C11950E1467037700372D20 /* Dollar_Eisenhower.jpg */; };
+		4C1195291467037700372D20 /* Dollar_Morgan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C11950F1467037700372D20 /* Dollar_Morgan.jpg */; };
+		4C11952A1467037700372D20 /* dollar_Peace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195101467037700372D20 /* dollar_Peace.jpg */; };
+		4C11952B1467037700372D20 /* Half_Barber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195111467037700372D20 /* Half_Barber.jpg */; };
+		4C11952C1467037700372D20 /* half_Franklyn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195121467037700372D20 /* half_Franklyn.jpg */; };
+		4C11952D1467037700372D20 /* Half_Kennedy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195131467037700372D20 /* Half_Kennedy.jpg */; };
+		4C11952E1467037700372D20 /* Half_Liberty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195141467037700372D20 /* Half_Liberty.jpg */; };
+		4C11952F1467037700372D20 /* Quarter_Barber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195151467037700372D20 /* Quarter_Barber.jpg */; };
+		4C1195301467037700372D20 /* quarter_liberty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195161467037700372D20 /* quarter_liberty.jpg */; };
+		4C1195311467037700372D20 /* Quarter_Washinton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195171467037700372D20 /* Quarter_Washinton.jpg */; };
+		4C11953B146703B700372D20 /* dime.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 4C119533146703B700372D20 /* dime.mtl */; };
+		4C11953C146703B700372D20 /* dime.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4C119534146703B700372D20 /* dime.obj */; };
+		4C11953D146703B700372D20 /* dollar.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 4C119535146703B700372D20 /* dollar.mtl */; };
+		4C11953E146703B700372D20 /* dollar.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4C119536146703B700372D20 /* dollar.obj */; };
+		4C11953F146703B700372D20 /* hlafDollar.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 4C119537146703B700372D20 /* hlafDollar.mtl */; };
+		4C119540146703B700372D20 /* hlafDollar.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4C119538146703B700372D20 /* hlafDollar.obj */; };
+		4C119541146703B700372D20 /* quarter.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 4C119539146703B700372D20 /* quarter.mtl */; };
+		4C119542146703B700372D20 /* quarter.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4C11953A146703B700372D20 /* quarter.obj */; };
+		4C1195481467185200372D20 /* JunkCoins.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4C1195471467185200372D20 /* JunkCoins.xml */; };
+		4C11954F14671D4200372D20 /* CoinList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C11954E14671D4200372D20 /* CoinList.m */; };
+		4C13378E14D5C2AF007C5C48 /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C13378D14D5C2AE007C5C48 /* CollectionView.m */; };
+		4C26F3BF14DD8AFB003E5A97 /* tableCellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C26F3BE14DD8AFB003E5A97 /* tableCellBG.png */; };
+		4C3EE09B14DAD37B0050DA88 /* doneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EE09A14DAD37B0050DA88 /* doneButton.png */; };
+		4C5DE65914DE55EA00E4E053 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE65714DE55EA00E4E053 /* DoneDown3.png */; };
+		4C5DE65A14DE55EA00E4E053 /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE65814DE55EA00E4E053 /* DoneUp3.png */; };
+		4C6B530214D825FD00294E20 /* collection_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530114D825FD00294E20 /* collection_button.png */; };
+		4C6B530514D828B100294E20 /* plainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530414D828B100294E20 /* plainBG.jpg */; };
+		4C6B530814D82A3A00294E20 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530614D82A3A00294E20 /* Default.png */; };
+		4C6B530914D82A3A00294E20 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530714D82A3A00294E20 /* Default@2x.png */; };
+		4C7E35D214DA4C69003B4A30 /* denominationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E35D114DA4C69003B4A30 /* denominationItem.m */; };
+		4C83A35D1482D06300AA88FA /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C83A35A1482D06300AA88FA /* backButton.png */; };
+		4C83A35E1482D06300AA88FA /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C83A35B1482D06300AA88FA /* nextButton.png */; };
+		4C83A35F1482D06300AA88FA /* prevButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C83A35C1482D06300AA88FA /* prevButton.png */; };
+		4C83A3621482E1FC00AA88FA /* loading_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C83A3611482E1FC00AA88FA /* loading_screen.png */; };
+		4C842E30146865140033E584 /* button100.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C842E2F146865140033E584 /* button100.png */; };
+		4C842E34146882B70033E584 /* button10.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C842E31146882B70033E584 /* button10.png */; };
+		4C842E35146882B70033E584 /* button25.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C842E32146882B70033E584 /* button25.png */; };
+		4C842E36146882B70033E584 /* button50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C842E33146882B70033E584 /* button50.png */; };
+		4C948A12146B67DA0059A685 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C948A11146B67DA0059A685 /* Coin.m */; };
+		4CAF6A3F1470AD7700DD62BC /* coinInfoBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF6A3E1470AD7700DD62BC /* coinInfoBG.png */; };
+		4CBE179A148295940026C80E /* planeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBE1799148295940026C80E /* planeBG.png */; };
+		4CC0823E147EE276005BFA96 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0823D147EE276005BFA96 /* mainBG.png */; };
+		4CC8AF7014DCCE38006431C2 /* CollectionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8AF6F14DCCE38006431C2 /* CollectionItemCell.xib */; };
+		4CC8AF7414DCCE85006431C2 /* CollectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8AF7314DCCE85006431C2 /* CollectionItemCell.m */; };
+		4CD210D9146F43850059B3DD /* CoinInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD210D8146F43850059B3DD /* CoinInfoView.m */; };
+		4CD2EFFB14DCD19100D9D017 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2EFFA14DCD19100D9D017 /* OBShapedButton.m */; };
+		4CD2EFFF14DCD19C00D9D017 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD2EFFE14DCD19C00D9D017 /* UIImage+ColorAtPixel.m */; };
+		4CD4A9C51481F62800541E71 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD4A9C41481F62800541E71 /* SystemConfiguration.framework */; };
+		4CD4A9C81481F72600541E71 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4A9C71481F72600541E71 /* Reachability.m */; };
+		4CD4A9CB1481FB6D00541E71 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4A9C91481FB6D00541E71 /* plane.mtl */; };
+		4CD4A9CC1481FB6D00541E71 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4A9CA1481FB6D00541E71 /* plane.obj */; };
+		4CD65F301490696A00E99AD6 /* Eisen0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD65F2E1490696A00E99AD6 /* Eisen0.caf */; };
+		4CD65F311490696A00E99AD6 /* Morgan.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD65F2F1490696A00E99AD6 /* Morgan.caf */; };
+		4CD65F381490787900E99AD6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD65F371490787900E99AD6 /* AudioToolbox.framework */; };
+		4CD65F3B14907C4E00E99AD6 /* Flip3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD65F3914907C4E00E99AD6 /* Flip3.caf */; };
+		4CD65F3C14907C4E00E99AD6 /* Peace0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD65F3A14907C4E00E99AD6 /* Peace0.caf */; };
+		4CD8FDF614D79E5400D0414D /* nickel.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDF414D79E5400D0414D /* nickel.mtl */; };
+		4CD8FDF714D79E5400D0414D /* nickel.obj in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDF514D79E5400D0414D /* nickel.obj */; };
+		4CD8FDFB14D79E6200D0414D /* Nickel_Buffalo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDF914D79E6200D0414D /* Nickel_Buffalo.jpg */; };
+		4CD8FDFC14D79E6200D0414D /* Nickel_Jefferson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDFA14D79E6200D0414D /* Nickel_Jefferson.jpg */; };
+		4CD8FDFE14D7A98100D0414D /* JunkCoins2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDFD14D7A98100D0414D /* JunkCoins2.xml */; };
+		4CD8FE0014D7BECC00D0414D /* button05.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDFF14D7BECC00D0414D /* button05.png */; };
+		4CD8FE0214D7BEEF00D0414D /* button05.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FE0114D7BEEF00D0414D /* button05.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C07F976148191C600D400E7 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
+		4C07F977148191C600D400E7 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
+		4C11944F1466D6EA00372D20 /* JunkSilver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JunkSilver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1194531466D6EA00372D20 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C1194551466D6EA00372D20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C1194571466D6EA00372D20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C11945B1466D6EA00372D20 /* JunkSilver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JunkSilver-Info.plist"; sourceTree = "<group>"; };
+		4C11945D1466D6EA00372D20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C11945F1466D6EA00372D20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C1194611466D6EA00372D20 /* JunkSilver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JunkSilver-Prefix.pch"; sourceTree = "<group>"; };
+		4C1194621466D6EA00372D20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C1194631466D6EA00372D20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C1194651466D6EA00372D20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4C1194661466D6EA00372D20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C1194691466D6EA00372D20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		4C1194861466DBDD00372D20 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4C1194891466DBE200372D20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C11948B1466DBF300372D20 /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NinevehGL.framework; path = "!Bobby/iOS/NinevehGL_Beta/NinevehGL.framework"; sourceTree = DEVELOPER_DIR; };
+		4C1194AC1466E48700372D20 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4C1194AD1466E48700372D20 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4C1194AE1466E48700372D20 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114x114.png; sourceTree = "<group>"; };
+		4C1194AF1466E48700372D20 /* icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57x57.png; sourceTree = "<group>"; };
+		4C1194C51466EA0700372D20 /* coinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coinView.h; sourceTree = "<group>"; };
+		4C1194C61466EA0700372D20 /* coinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coinView.m; sourceTree = "<group>"; };
+		4C1194FD1467037700372D20 /* Dime_Barber_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dime_Barber_NRM.png; sourceTree = "<group>"; };
+		4C1194FE1467037700372D20 /* Dime_Mercury_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dime_Mercury_NRM.png; sourceTree = "<group>"; };
+		4C1194FF1467037700372D20 /* dime_Roosevelt_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dime_Roosevelt_NRM.png; sourceTree = "<group>"; };
+		4C1195001467037700372D20 /* Dollar_Eisenhower_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dollar_Eisenhower_NRM.png; sourceTree = "<group>"; };
+		4C1195011467037700372D20 /* Dollar_Morgan_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dollar_Morgan_NRM.png; sourceTree = "<group>"; };
+		4C1195021467037700372D20 /* dollar_Peace_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_Peace_NRM.png; sourceTree = "<group>"; };
+		4C1195031467037700372D20 /* Half_Barber_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Half_Barber_NRM.png; sourceTree = "<group>"; };
+		4C1195041467037700372D20 /* half_Franklyn_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = half_Franklyn_NRM.png; sourceTree = "<group>"; };
+		4C1195051467037700372D20 /* Half_Kennedy_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Half_Kennedy_NRM.png; sourceTree = "<group>"; };
+		4C1195061467037700372D20 /* Half_Liberty_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Half_Liberty_NRM.png; sourceTree = "<group>"; };
+		4C1195071467037700372D20 /* Quarter_Barber_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quarter_Barber_NRM.png; sourceTree = "<group>"; };
+		4C1195081467037700372D20 /* quarter_liberty_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quarter_liberty_NRM.png; sourceTree = "<group>"; };
+		4C1195091467037700372D20 /* Quarter_Washinton_NRM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quarter_Washinton_NRM.png; sourceTree = "<group>"; };
+		4C11950B1467037700372D20 /* Dime_Barber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dime_Barber.jpg; sourceTree = "<group>"; };
+		4C11950C1467037700372D20 /* Dime_Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dime_Mercury.jpg; sourceTree = "<group>"; };
+		4C11950D1467037700372D20 /* dime_Roosevelt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dime_Roosevelt.jpg; sourceTree = "<group>"; };
+		4C11950E1467037700372D20 /* Dollar_Eisenhower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dollar_Eisenhower.jpg; sourceTree = "<group>"; };
+		4C11950F1467037700372D20 /* Dollar_Morgan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dollar_Morgan.jpg; sourceTree = "<group>"; };
+		4C1195101467037700372D20 /* dollar_Peace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dollar_Peace.jpg; sourceTree = "<group>"; };
+		4C1195111467037700372D20 /* Half_Barber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Half_Barber.jpg; sourceTree = "<group>"; };
+		4C1195121467037700372D20 /* half_Franklyn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = half_Franklyn.jpg; sourceTree = "<group>"; };
+		4C1195131467037700372D20 /* Half_Kennedy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Half_Kennedy.jpg; sourceTree = "<group>"; };
+		4C1195141467037700372D20 /* Half_Liberty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Half_Liberty.jpg; sourceTree = "<group>"; };
+		4C1195151467037700372D20 /* Quarter_Barber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Quarter_Barber.jpg; sourceTree = "<group>"; };
+		4C1195161467037700372D20 /* quarter_liberty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quarter_liberty.jpg; sourceTree = "<group>"; };
+		4C1195171467037700372D20 /* Quarter_Washinton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Quarter_Washinton.jpg; sourceTree = "<group>"; };
+		4C119533146703B700372D20 /* dime.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dime.mtl; sourceTree = "<group>"; };
+		4C119534146703B700372D20 /* dime.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dime.obj; sourceTree = "<group>"; };
+		4C119535146703B700372D20 /* dollar.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dollar.mtl; sourceTree = "<group>"; };
+		4C119536146703B700372D20 /* dollar.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dollar.obj; sourceTree = "<group>"; };
+		4C119537146703B700372D20 /* hlafDollar.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hlafDollar.mtl; sourceTree = "<group>"; };
+		4C119538146703B700372D20 /* hlafDollar.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hlafDollar.obj; sourceTree = "<group>"; };
+		4C119539146703B700372D20 /* quarter.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quarter.mtl; sourceTree = "<group>"; };
+		4C11953A146703B700372D20 /* quarter.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quarter.obj; sourceTree = "<group>"; };
+		4C1195471467185200372D20 /* JunkCoins.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = JunkCoins.xml; sourceTree = "<group>"; };
+		4C11954D14671D4200372D20 /* CoinList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinList.h; sourceTree = "<group>"; };
+		4C11954E14671D4200372D20 /* CoinList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinList.m; sourceTree = "<group>"; };
+		4C13378C14D5C2AE007C5C48 /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
+		4C13378D14D5C2AE007C5C48 /* CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
+		4C26F3BE14DD8AFB003E5A97 /* tableCellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableCellBG.png; sourceTree = "<group>"; };
+		4C3EE09A14DAD37B0050DA88 /* doneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doneButton.png; sourceTree = "<group>"; };
+		4C5DE65714DE55EA00E4E053 /* DoneDown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown3.png; sourceTree = "<group>"; };
+		4C5DE65814DE55EA00E4E053 /* DoneUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3.png; sourceTree = "<group>"; };
+		4C6B530114D825FD00294E20 /* collection_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_button.png; sourceTree = "<group>"; };
+		4C6B530414D828B100294E20 /* plainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plainBG.jpg; sourceTree = "<group>"; };
+		4C6B530614D82A3A00294E20 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4C6B530714D82A3A00294E20 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4C7E35D014DA4C69003B4A30 /* denominationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = denominationItem.h; sourceTree = "<group>"; };
+		4C7E35D114DA4C69003B4A30 /* denominationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = denominationItem.m; sourceTree = "<group>"; };
+		4C83A35A1482D06300AA88FA /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		4C83A35B1482D06300AA88FA /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextButton.png; sourceTree = "<group>"; };
+		4C83A35C1482D06300AA88FA /* prevButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prevButton.png; sourceTree = "<group>"; };
+		4C83A3611482E1FC00AA88FA /* loading_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_screen.png; sourceTree = "<group>"; };
+		4C842E2F146865140033E584 /* button100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button100.png; sourceTree = "<group>"; };
+		4C842E31146882B70033E584 /* button10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button10.png; sourceTree = "<group>"; };
+		4C842E32146882B70033E584 /* button25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button25.png; sourceTree = "<group>"; };
+		4C842E33146882B70033E584 /* button50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button50.png; sourceTree = "<group>"; };
+		4C948A10146B67DA0059A685 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		4C948A11146B67DA0059A685 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
+		4C948A15146B6CD00059A685 /* roeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roeLog.h; sourceTree = "<group>"; };
+		4CAF6A3E1470AD7700DD62BC /* coinInfoBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coinInfoBG.png; sourceTree = "<group>"; };
+		4CBE1799148295940026C80E /* planeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeBG.png; sourceTree = "<group>"; };
+		4CC0823D147EE276005BFA96 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
+		4CC8AF6F14DCCE38006431C2 /* CollectionItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItemCell.xib; sourceTree = "<group>"; };
+		4CC8AF7214DCCE85006431C2 /* CollectionItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionItemCell.h; sourceTree = "<group>"; };
+		4CC8AF7314DCCE85006431C2 /* CollectionItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionItemCell.m; sourceTree = "<group>"; };
+		4CD210D7146F43840059B3DD /* CoinInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinInfoView.h; sourceTree = "<group>"; };
+		4CD210D8146F43850059B3DD /* CoinInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinInfoView.m; sourceTree = "<group>"; };
+		4CD2EFF914DCD19100D9D017 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
+		4CD2EFFA14DCD19100D9D017 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
+		4CD2EFFD14DCD19C00D9D017 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
+		4CD2EFFE14DCD19C00D9D017 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
+		4CD4A9C41481F62800541E71 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4CD4A9C61481F72600541E71 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4CD4A9C71481F72600541E71 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4CD4A9C91481FB6D00541E71 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
+		4CD4A9CA1481FB6D00541E71 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
+		4CD65F2E1490696A00E99AD6 /* Eisen0.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Eisen0.caf; sourceTree = "<group>"; };
+		4CD65F2F1490696A00E99AD6 /* Morgan.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Morgan.caf; sourceTree = "<group>"; };
+		4CD65F371490787900E99AD6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4CD65F3914907C4E00E99AD6 /* Flip3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Flip3.caf; sourceTree = "<group>"; };
+		4CD65F3A14907C4E00E99AD6 /* Peace0.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Peace0.caf; sourceTree = "<group>"; };
+		4CD8FDF414D79E5400D0414D /* nickel.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nickel.mtl; sourceTree = "<group>"; };
+		4CD8FDF514D79E5400D0414D /* nickel.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nickel.obj; sourceTree = "<group>"; };
+		4CD8FDF914D79E6200D0414D /* Nickel_Buffalo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nickel_Buffalo.jpg; sourceTree = "<group>"; };
+		4CD8FDFA14D79E6200D0414D /* Nickel_Jefferson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nickel_Jefferson.jpg; sourceTree = "<group>"; };
+		4CD8FDFD14D7A98100D0414D /* JunkCoins2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = JunkCoins2.xml; sourceTree = "<group>"; };
+		4CD8FDFF14D7BECC00D0414D /* button05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button05.png; sourceTree = "<group>"; };
+		4CD8FE0114D7BEEF00D0414D /* button05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button05.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C11944C1466D6EA00372D20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD65F381490787900E99AD6 /* AudioToolbox.framework in Frameworks */,
+				4CD4A9C51481F62800541E71 /* SystemConfiguration.framework in Frameworks */,
+				4C11948C1466DBF300372D20 /* NinevehGL.framework in Frameworks */,
+				4C11948A1466DBE200372D20 /* QuartzCore.framework in Frameworks */,
+				4C1194871466DBDD00372D20 /* OpenGLES.framework in Frameworks */,
+				4C1194541466D6EA00372D20 /* UIKit.framework in Frameworks */,
+				4C1194561466D6EA00372D20 /* Foundation.framework in Frameworks */,
+				4C1194581466D6EA00372D20 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C1194441466D6EA00372D20 = {
+			isa = PBXGroup;
+			children = (
+				4C1194591466D6EA00372D20 /* Silver90 */,
+				4C1194521466D6EA00372D20 /* Frameworks */,
+				4C1194501466D6EA00372D20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C1194501466D6EA00372D20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C11944F1466D6EA00372D20 /* JunkSilver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C1194521466D6EA00372D20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CD65F371490787900E99AD6 /* AudioToolbox.framework */,
+				4CD4A9C41481F62800541E71 /* SystemConfiguration.framework */,
+				4C11948B1466DBF300372D20 /* NinevehGL.framework */,
+				4C1194891466DBE200372D20 /* QuartzCore.framework */,
+				4C1194861466DBDD00372D20 /* OpenGLES.framework */,
+				4C1194531466D6EA00372D20 /* UIKit.framework */,
+				4C1194551466D6EA00372D20 /* Foundation.framework */,
+				4C1194571466D6EA00372D20 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C1194591466D6EA00372D20 /* Silver90 */ = {
+			isa = PBXGroup;
+			children = (
+				4C1194681466D6EA00372D20 /* ViewController.xib */,
+				4CC8AF6F14DCCE38006431C2 /* CollectionItemCell.xib */,
+				4C1194A91466E48700372D20 /* assets */,
+				4C1194651466D6EA00372D20 /* ViewController.h */,
+				4C1194661466D6EA00372D20 /* ViewController.m */,
+				4C1194C51466EA0700372D20 /* coinView.h */,
+				4C1194C61466EA0700372D20 /* coinView.m */,
+				4C13378C14D5C2AE007C5C48 /* CollectionView.h */,
+				4C13378D14D5C2AE007C5C48 /* CollectionView.m */,
+				4CD210D7146F43840059B3DD /* CoinInfoView.h */,
+				4C7E35D014DA4C69003B4A30 /* denominationItem.h */,
+				4C7E35D114DA4C69003B4A30 /* denominationItem.m */,
+				4CD210D8146F43850059B3DD /* CoinInfoView.m */,
+				4C11945A1466D6EA00372D20 /* Supporting Files */,
+				4C948A10146B67DA0059A685 /* Coin.h */,
+				4C948A11146B67DA0059A685 /* Coin.m */,
+				4CC8AF7214DCCE85006431C2 /* CollectionItemCell.h */,
+				4CC8AF7314DCCE85006431C2 /* CollectionItemCell.m */,
+				4C1701CE14DD6D2E0035196F /* more Classes */,
+			);
+			path = Silver90;
+			sourceTree = "<group>";
+		};
+		4C11945A1466D6EA00372D20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CD2EFFD14DCD19C00D9D017 /* UIImage+ColorAtPixel.h */,
+				4CD2EFFE14DCD19C00D9D017 /* UIImage+ColorAtPixel.m */,
+				4CD2EFF914DCD19100D9D017 /* OBShapedButton.h */,
+				4CD2EFFA14DCD19100D9D017 /* OBShapedButton.m */,
+				4C1195471467185200372D20 /* JunkCoins.xml */,
+				4CD8FDFD14D7A98100D0414D /* JunkCoins2.xml */,
+				4C11945B1466D6EA00372D20 /* JunkSilver-Info.plist */,
+				4C11945C1466D6EA00372D20 /* InfoPlist.strings */,
+				4C11945F1466D6EA00372D20 /* main.m */,
+				4C1194611466D6EA00372D20 /* JunkSilver-Prefix.pch */,
+				4C948A15146B6CD00059A685 /* roeLog.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C1194A91466E48700372D20 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				4C5DE65714DE55EA00E4E053 /* DoneDown3.png */,
+				4C5DE65814DE55EA00E4E053 /* DoneUp3.png */,
+				4C26F3BE14DD8AFB003E5A97 /* tableCellBG.png */,
+				4C3EE09A14DAD37B0050DA88 /* doneButton.png */,
+				4C6B530614D82A3A00294E20 /* Default.png */,
+				4C6B530714D82A3A00294E20 /* Default@2x.png */,
+				4C6B530414D828B100294E20 /* plainBG.jpg */,
+				4CD8FDFF14D7BECC00D0414D /* button05.png */,
+				4CD65F2D1490696A00E99AD6 /* audio */,
+				4C83A3611482E1FC00AA88FA /* loading_screen.png */,
+				4C83A35A1482D06300AA88FA /* backButton.png */,
+				4C83A35B1482D06300AA88FA /* nextButton.png */,
+				4C83A35C1482D06300AA88FA /* prevButton.png */,
+				4C6B530114D825FD00294E20 /* collection_button.png */,
+				4CBE1799148295940026C80E /* planeBG.png */,
+				4CC0823D147EE276005BFA96 /* mainBG.png */,
+				4CAF6A3E1470AD7700DD62BC /* coinInfoBG.png */,
+				4C842E31146882B70033E584 /* button10.png */,
+				4CD8FE0114D7BEEF00D0414D /* button05.png */,
+				4C842E32146882B70033E584 /* button25.png */,
+				4C842E33146882B70033E584 /* button50.png */,
+				4C842E2F146865140033E584 /* button100.png */,
+				4C119532146703B700372D20 /* objs */,
+				4C1194FC1467037700372D20 /* normals */,
+				4C11950A1467037700372D20 /* textures */,
+				4C1194AC1466E48700372D20 /* Default.png */,
+				4C1194AD1466E48700372D20 /* Default@2x.png */,
+				4C1194AE1466E48700372D20 /* icon114x114.png */,
+				4C1194AF1466E48700372D20 /* icon57x57.png */,
+			);
+			path = assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		4C1194FC1467037700372D20 /* normals */ = {
+			isa = PBXGroup;
+			children = (
+				4C1194FD1467037700372D20 /* Dime_Barber_NRM.png */,
+				4C1194FE1467037700372D20 /* Dime_Mercury_NRM.png */,
+				4C1194FF1467037700372D20 /* dime_Roosevelt_NRM.png */,
+				4C1195001467037700372D20 /* Dollar_Eisenhower_NRM.png */,
+				4C1195011467037700372D20 /* Dollar_Morgan_NRM.png */,
+				4C1195021467037700372D20 /* dollar_Peace_NRM.png */,
+				4C1195031467037700372D20 /* Half_Barber_NRM.png */,
+				4C1195041467037700372D20 /* half_Franklyn_NRM.png */,
+				4C1195051467037700372D20 /* Half_Kennedy_NRM.png */,
+				4C1195061467037700372D20 /* Half_Liberty_NRM.png */,
+				4C1195071467037700372D20 /* Quarter_Barber_NRM.png */,
+				4C1195081467037700372D20 /* quarter_liberty_NRM.png */,
+				4C1195091467037700372D20 /* Quarter_Washinton_NRM.png */,
+			);
+			path = normals;
+			sourceTree = "<group>";
+		};
+		4C11950A1467037700372D20 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				4CD8FDF914D79E6200D0414D /* Nickel_Buffalo.jpg */,
+				4CD8FDFA14D79E6200D0414D /* Nickel_Jefferson.jpg */,
+				4C11950B1467037700372D20 /* Dime_Barber.jpg */,
+				4C11950C1467037700372D20 /* Dime_Mercury.jpg */,
+				4C11950D1467037700372D20 /* dime_Roosevelt.jpg */,
+				4C11950E1467037700372D20 /* Dollar_Eisenhower.jpg */,
+				4C11950F1467037700372D20 /* Dollar_Morgan.jpg */,
+				4C1195101467037700372D20 /* dollar_Peace.jpg */,
+				4C1195111467037700372D20 /* Half_Barber.jpg */,
+				4C1195121467037700372D20 /* half_Franklyn.jpg */,
+				4C1195131467037700372D20 /* Half_Kennedy.jpg */,
+				4C1195141467037700372D20 /* Half_Liberty.jpg */,
+				4C1195151467037700372D20 /* Quarter_Barber.jpg */,
+				4C1195161467037700372D20 /* quarter_liberty.jpg */,
+				4C1195171467037700372D20 /* Quarter_Washinton.jpg */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		4C119532146703B700372D20 /* objs */ = {
+			isa = PBXGroup;
+			children = (
+				4CD8FDF414D79E5400D0414D /* nickel.mtl */,
+				4CD8FDF514D79E5400D0414D /* nickel.obj */,
+				4CD4A9C91481FB6D00541E71 /* plane.mtl */,
+				4CD4A9CA1481FB6D00541E71 /* plane.obj */,
+				4C119533146703B700372D20 /* dime.mtl */,
+				4C119534146703B700372D20 /* dime.obj */,
+				4C119535146703B700372D20 /* dollar.mtl */,
+				4C119536146703B700372D20 /* dollar.obj */,
+				4C119537146703B700372D20 /* hlafDollar.mtl */,
+				4C119538146703B700372D20 /* hlafDollar.obj */,
+				4C119539146703B700372D20 /* quarter.mtl */,
+				4C11953A146703B700372D20 /* quarter.obj */,
+			);
+			path = objs;
+			sourceTree = "<group>";
+		};
+		4C1701CE14DD6D2E0035196F /* more Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C1194621466D6EA00372D20 /* AppDelegate.h */,
+				4C1194631466D6EA00372D20 /* AppDelegate.m */,
+				4C11954D14671D4200372D20 /* CoinList.h */,
+				4C11954E14671D4200372D20 /* CoinList.m */,
+				4CD4A9C61481F72600541E71 /* Reachability.h */,
+				4CD4A9C71481F72600541E71 /* Reachability.m */,
+				4C07F976148191C600D400E7 /* FileHelpers.h */,
+				4C07F977148191C600D400E7 /* FileHelpers.m */,
+			);
+			name = "more Classes";
+			sourceTree = "<group>";
+		};
+		4CD65F2D1490696A00E99AD6 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				4CD65F3914907C4E00E99AD6 /* Flip3.caf */,
+				4CD65F3A14907C4E00E99AD6 /* Peace0.caf */,
+				4CD65F2E1490696A00E99AD6 /* Eisen0.caf */,
+				4CD65F2F1490696A00E99AD6 /* Morgan.caf */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C11944E1466D6EA00372D20 /* JunkSilver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C11946D1466D6EA00372D20 /* Build configuration list for PBXNativeTarget "JunkSilver" */;
+			buildPhases = (
+				4C11944B1466D6EA00372D20 /* Sources */,
+				4C11944C1466D6EA00372D20 /* Frameworks */,
+				4C11944D1466D6EA00372D20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JunkSilver;
+			productName = Silver90;
+			productReference = 4C11944F1466D6EA00372D20 /* JunkSilver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C1194461466D6EA00372D20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4C1194491466D6EA00372D20 /* Build configuration list for PBXProject "JunkSilver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4C1194441466D6EA00372D20;
+			productRefGroup = 4C1194501466D6EA00372D20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C11944E1466D6EA00372D20 /* JunkSilver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C11944D1466D6EA00372D20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C11945E1466D6EA00372D20 /* InfoPlist.strings in Resources */,
+				4C11946A1466D6EA00372D20 /* ViewController.xib in Resources */,
+				4C1194B31466E48700372D20 /* Default.png in Resources */,
+				4C1194B41466E48700372D20 /* Default@2x.png in Resources */,
+				4C1194B51466E48700372D20 /* icon114x114.png in Resources */,
+				4C1194B61466E48700372D20 /* icon57x57.png in Resources */,
+				4C1195181467037700372D20 /* Dime_Barber_NRM.png in Resources */,
+				4C1195191467037700372D20 /* Dime_Mercury_NRM.png in Resources */,
+				4C11951A1467037700372D20 /* dime_Roosevelt_NRM.png in Resources */,
+				4C11951B1467037700372D20 /* Dollar_Eisenhower_NRM.png in Resources */,
+				4C11951C1467037700372D20 /* Dollar_Morgan_NRM.png in Resources */,
+				4C11951D1467037700372D20 /* dollar_Peace_NRM.png in Resources */,
+				4C11951E1467037700372D20 /* Half_Barber_NRM.png in Resources */,
+				4C11951F1467037700372D20 /* half_Franklyn_NRM.png in Resources */,
+				4C1195201467037700372D20 /* Half_Kennedy_NRM.png in Resources */,
+				4C1195211467037700372D20 /* Half_Liberty_NRM.png in Resources */,
+				4C1195221467037700372D20 /* Quarter_Barber_NRM.png in Resources */,
+				4C1195231467037700372D20 /* quarter_liberty_NRM.png in Resources */,
+				4C1195241467037700372D20 /* Quarter_Washinton_NRM.png in Resources */,
+				4C1195251467037700372D20 /* Dime_Barber.jpg in Resources */,
+				4C1195261467037700372D20 /* Dime_Mercury.jpg in Resources */,
+				4C1195271467037700372D20 /* dime_Roosevelt.jpg in Resources */,
+				4C1195281467037700372D20 /* Dollar_Eisenhower.jpg in Resources */,
+				4C1195291467037700372D20 /* Dollar_Morgan.jpg in Resources */,
+				4C11952A1467037700372D20 /* dollar_Peace.jpg in Resources */,
+				4C11952B1467037700372D20 /* Half_Barber.jpg in Resources */,
+				4C11952C1467037700372D20 /* half_Franklyn.jpg in Resources */,
+				4C11952D1467037700372D20 /* Half_Kennedy.jpg in Resources */,
+				4C11952E1467037700372D20 /* Half_Liberty.jpg in Resources */,
+				4C11952F1467037700372D20 /* Quarter_Barber.jpg in Resources */,
+				4C1195301467037700372D20 /* quarter_liberty.jpg in Resources */,
+				4C1195311467037700372D20 /* Quarter_Washinton.jpg in Resources */,
+				4C11953B146703B700372D20 /* dime.mtl in Resources */,
+				4C11953C146703B700372D20 /* dime.obj in Resources */,
+				4C11953D146703B700372D20 /* dollar.mtl in Resources */,
+				4C11953E146703B700372D20 /* dollar.obj in Resources */,
+				4C11953F146703B700372D20 /* hlafDollar.mtl in Resources */,
+				4C119540146703B700372D20 /* hlafDollar.obj in Resources */,
+				4C119541146703B700372D20 /* quarter.mtl in Resources */,
+				4C119542146703B700372D20 /* quarter.obj in Resources */,
+				4C1195481467185200372D20 /* JunkCoins.xml in Resources */,
+				4C842E30146865140033E584 /* button100.png in Resources */,
+				4C842E34146882B70033E584 /* button10.png in Resources */,
+				4C842E35146882B70033E584 /* button25.png in Resources */,
+				4C842E36146882B70033E584 /* button50.png in Resources */,
+				4CAF6A3F1470AD7700DD62BC /* coinInfoBG.png in Resources */,
+				4CC0823E147EE276005BFA96 /* mainBG.png in Resources */,
+				4CD4A9CB1481FB6D00541E71 /* plane.mtl in Resources */,
+				4CD4A9CC1481FB6D00541E71 /* plane.obj in Resources */,
+				4CBE179A148295940026C80E /* planeBG.png in Resources */,
+				4C83A35D1482D06300AA88FA /* backButton.png in Resources */,
+				4C83A35E1482D06300AA88FA /* nextButton.png in Resources */,
+				4C83A35F1482D06300AA88FA /* prevButton.png in Resources */,
+				4C83A3621482E1FC00AA88FA /* loading_screen.png in Resources */,
+				4CD65F301490696A00E99AD6 /* Eisen0.caf in Resources */,
+				4CD65F311490696A00E99AD6 /* Morgan.caf in Resources */,
+				4CD65F3B14907C4E00E99AD6 /* Flip3.caf in Resources */,
+				4CD65F3C14907C4E00E99AD6 /* Peace0.caf in Resources */,
+				4CD8FDF614D79E5400D0414D /* nickel.mtl in Resources */,
+				4CD8FDF714D79E5400D0414D /* nickel.obj in Resources */,
+				4CD8FDFB14D79E6200D0414D /* Nickel_Buffalo.jpg in Resources */,
+				4CD8FDFC14D79E6200D0414D /* Nickel_Jefferson.jpg in Resources */,
+				4CD8FDFE14D7A98100D0414D /* JunkCoins2.xml in Resources */,
+				4CD8FE0014D7BECC00D0414D /* button05.png in Resources */,
+				4CD8FE0214D7BEEF00D0414D /* button05.png in Resources */,
+				4C6B530214D825FD00294E20 /* collection_button.png in Resources */,
+				4C6B530514D828B100294E20 /* plainBG.jpg in Resources */,
+				4C6B530814D82A3A00294E20 /* Default.png in Resources */,
+				4C6B530914D82A3A00294E20 /* Default@2x.png in Resources */,
+				4C3EE09B14DAD37B0050DA88 /* doneButton.png in Resources */,
+				4CC8AF7014DCCE38006431C2 /* CollectionItemCell.xib in Resources */,
+				4C26F3BF14DD8AFB003E5A97 /* tableCellBG.png in Resources */,
+				4C5DE65914DE55EA00E4E053 /* DoneDown3.png in Resources */,
+				4C5DE65A14DE55EA00E4E053 /* DoneUp3.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C11944B1466D6EA00372D20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1194601466D6EA00372D20 /* main.m in Sources */,
+				4C1194641466D6EA00372D20 /* AppDelegate.m in Sources */,
+				4C1194671466D6EA00372D20 /* ViewController.m in Sources */,
+				4C1194C71466EA0700372D20 /* coinView.m in Sources */,
+				4C11954F14671D4200372D20 /* CoinList.m in Sources */,
+				4C948A12146B67DA0059A685 /* Coin.m in Sources */,
+				4CD210D9146F43850059B3DD /* CoinInfoView.m in Sources */,
+				4C07F978148191C600D400E7 /* FileHelpers.m in Sources */,
+				4CD4A9C81481F72600541E71 /* Reachability.m in Sources */,
+				4C13378E14D5C2AF007C5C48 /* CollectionView.m in Sources */,
+				4C7E35D214DA4C69003B4A30 /* denominationItem.m in Sources */,
+				4CC8AF7414DCCE85006431C2 /* CollectionItemCell.m in Sources */,
+				4CD2EFFB14DCD19100D9D017 /* OBShapedButton.m in Sources */,
+				4CD2EFFF14DCD19C00D9D017 /* UIImage+ColorAtPixel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C11945C1466D6EA00372D20 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C11945D1466D6EA00372D20 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4C1194681466D6EA00372D20 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C1194691466D6EA00372D20 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C11946B1466D6EA00372D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4C11946C1466D6EA00372D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C11946E1466D6EA00372D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/!Bobby/iOS/NinevehGL_Beta\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Silver90/JunkSilver-Prefix.pch";
+				INFOPLIST_FILE = "Silver90/JunkSilver-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = JunkSilver;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C11946F1466D6EA00372D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/!Bobby/iOS/NinevehGL_Beta\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Silver90/JunkSilver-Prefix.pch";
+				INFOPLIST_FILE = "Silver90/JunkSilver-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = JunkSilver;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C1194491466D6EA00372D20 /* Build configuration list for PBXProject "JunkSilver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C11946B1466D6EA00372D20 /* Debug */,
+				4C11946C1466D6EA00372D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C11946D1466D6EA00372D20 /* Build configuration list for PBXNativeTarget "JunkSilver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C11946E1466D6EA00372D20 /* Debug */,
+				4C11946F1466D6EA00372D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C1194461466D6EA00372D20 /* Project object */;
+}

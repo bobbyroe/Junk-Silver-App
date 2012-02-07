@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<feed>
+  <updated>2011-10-30T12:30</updated>
+  <title>90% Silver U.S. Coins</title>
+  <subtitle>Info from R.S. Yeoman's 'Red Book'</subtitle>
+  <author><name>Bobby Roe</name></author>
+  <!-- dimes 0 -2 -->
+  <entry>
+    <name>Barber</name>
+    <dates>1892-1916</dates>
+    <denominationIndex>10</denominationIndex>
+    <weightInGrams>2.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.07234</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Mercury</name>
+    <dates>1916-1945</dates>
+    <denominationIndex>10</denominationIndex>
+    <weightInGrams>2.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.07234</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Roosevelt</name>
+    <dates>1946 to date</dates>
+    <denominationIndex>10</denominationIndex>
+    <weightInGrams>2.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.07234</netWeightSilverInOz>
+  </entry>  
+  <!-- quarters 3 - 5 -->
+  <entry>
+    <name>Barber</name>
+    <dates>1892-1916</dates>
+    <denominationIndex>25</denominationIndex>
+    <weightInGrams>6.25</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.18084</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Liberty</name>
+    <dates>1916-1930</dates>
+    <denominationIndex>25</denominationIndex>
+    <weightInGrams>6.25</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.18084</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Washington</name>
+    <dates>1932 to date</dates>
+    <denominationIndex>25</denominationIndex>
+    <weightInGrams>6.25</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.18084</netWeightSilverInOz>
+  </entry>  
+  <!-- half dollars 6 - 8 -->
+  <!--
+  <entry>
+    <name>Barber</name>
+    <dates>1892-1915</dates>
+    <denominationIndex>50</denominationIndex>
+    <weightInGrams>12.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.36169</netWeightSilverInOz>
+  </entry>  
+  -->
+  <entry>
+    <name>Liberty</name>
+    <dates>1916-1947</dates>
+    <denominationIndex>50</denominationIndex>
+    <weightInGrams>12.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.36169</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Franklin</name>
+    <dates>1948-1963</dates>
+    <denominationIndex>50</denominationIndex>
+    <weightInGrams>12.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.36169</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Kennedy</name>
+    <dates>1964 to date</dates>
+    <denominationIndex>50</denominationIndex>
+    <weightInGrams>12.50</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.36169</netWeightSilverInOz>
+  </entry>  
+  <!-- dollars  9 - 11 -->
+  <entry>
+    <name>Morgan</name>
+    <dates>1878-1921</dates>
+    <denominationIndex>100</denominationIndex>
+    <weightInGrams>26.73</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.77344</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Peace</name>
+    <dates>1921-1935</dates>
+    <denominationIndex>100</denominationIndex>
+    <weightInGrams>26.73</weightInGrams>
+    <percentageSilver>90</percentageSilver>
+    <percentageCopper>10</percentageCopper>
+    <netWeightSilverInOz>0.77344</netWeightSilverInOz>
+  </entry>  
+  <entry>
+    <name>Eisenhower</name>
+    <dates>1971-1976</dates>
+    <denominationIndex>100</denominationIndex>
+    <weightInGrams>24.59</weightInGrams>
+    <percentageSilver>40</percentageSilver>
+    <percentageCopper>60</percentageCopper>
+    <netWeightSilverInOz>0.3161</netWeightSilverInOz>
+  </entry>
+</feed>
