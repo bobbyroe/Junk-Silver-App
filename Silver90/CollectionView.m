@@ -23,12 +23,6 @@
 {
     [super awakeFromNib];
     selectedIndexes = [[NSMutableDictionary alloc] init];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(keyboardDidShow:) 
-                                                 name:UIKeyboardDidShowNotification 
-                                               object:nil];	
-    collectionCells = [[NSMutableArray alloc] initWithCapacity:kNumRows];
 }
 
 #pragma mark - touch events
@@ -38,17 +32,6 @@
     [self animateCollectionViewTo:690];
 }
 
-- (void)doneButton:(id)sender {
-    // [self updateLabels];
-    BOOL saved = [self saveCollectionData];
-    if (saved) roeLog(@"saved.");
-    else roeLog(@"NOT saved!");
-    
-    // refresh the total Value & the collection table
-    [self updateCollectionTotalValue];
-    
-    [activeTextField resignFirstResponder];
-}
 #pragma mark animation!
 - (void)animateCollectionViewTo:(int)yPos {
     // Animate it!
@@ -74,41 +57,33 @@
 
 - (BOOL)saveCollectionData
 {
+    
+    int updatedTextFieldIndex = activeTextField.tag;
+    // roeLog(@"saving data ... %i",updatedTextFieldIndex);
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-    int otherIndex = -1;
-    for (int t = 0; t < [collectionCells count]; t ++) {
-        // denominationItem *thisItem = nil;
+    int tempArrayIndex = 0;
+    // update denominationItems array
+    for (int y = 0; y < [denominationItems count]; y ++) {
+        denominationItem *thisItem = (denominationItem *)[denominationItems objectAtIndex:y];
         
-        CollectionItemCell *thisCell = (CollectionItemCell *)[collectionCells objectAtIndex:t];
-        NSString *cellDenominationLabelText = [NSString stringWithFormat:@"%@",[thisCell.denomLabel text]];
-        /*
-        if ([cellDenominationLabelText isEqualToString:@""]) roeLog(@"NOTHING!!!!");
-        else {
-            otherIndex++;
-            thisItem = (denominationItem *)[denominationItems objectAtIndex:otherIndex];
-        }
-         */
-        roeLog(@"cell text = %@ (%i)",cellDenominationLabelText, t);
-        int numFields = thisCell.numSubItems;
-        for (int u = 0; u < numFields; u++) {
-            
-            NSString *countFieldString = [[thisCell.countFields objectAtIndex:u] text];
-            
-            /*
-            if (otherIndex > -1) { // if the cell text is a non-null value
-                denominationItem *thisSubItem = (denominationItem *)[thisItem.myCoins objectAtIndex:u];
-                thisSubItem.numCoinsString = countFieldString;
+        for (int z = 0; z < thisItem.numCoins; z ++) {
+            denominationItem *childCoinItem = (denominationItem *)[thisItem.myCoins objectAtIndex:z];
+            NSString *countFieldString = (NSString *)childCoinItem.numCoinsString;
+            if (tempArrayIndex == updatedTextFieldIndex) { 
+                countFieldString = activeTextField.text;
+                childCoinItem.numCoinsString = countFieldString;
+                childCoinItem.numCoins = (int)[childCoinItem.numCoinsString floatValue];
+                roeLog(@">>> %@: %i",childCoinItem.numCoinsString,childCoinItem.numCoins);
             }
-            */
-            
-            [tempArray addObject:countFieldString]; // add string to Array
-        }        
+            [tempArray addObject:countFieldString];
+            tempArrayIndex ++;
+        }
     }
     
     NSArray *collectionData = [NSArray arrayWithArray:tempArray];
     return [NSKeyedArchiver archiveRootObject:collectionData toFile:[self collectionArchivePath]];
-}
 
+}
 - (void)fetchCollectionData
 {
     // does the file exist yet?
@@ -125,30 +100,6 @@
     [self generateDenominationList];
 }
 
-- (void) updateLabels { // :(int)denomIndex
-    
-    roeLog(@"update labels function might go away");
-    /*
-    // loop through the TextFields for this cell and sum them
-    int curTotal = 0;
-    for (int i = 0; i < [curCell.countFields count]; i++ ) {
-        UITextField *thisField = [curCell.countFields objectAtIndex:i];
-        NSString *countString = thisField.text;
-        int countValue = (int)[countString floatValue];
-        
-        // also calculate the value and assign to all value labels
-        // [[curCell.valueLabels objectAtIndex:i] setText:@"$0.00"];
-        
-        
-        curTotal += countValue;
-    }
-    // assign this value to the cell's total countlabel
-    NSString *totalCount = [NSString stringWithFormat:@"%i",curTotal];
-    [curCell.countLabel setText:totalCount];
-    //roeLog(@"(%i) total:%i",[curCell.countFields count],curTotal);
-     */
-}
-
 - (void) setSpotValue:(CGFloat)theValue
 {
     spotPrice = theValue;
@@ -156,7 +107,7 @@
 }
 
 - (void) updateCollectionTotalValue {
-        
+    roeLog(@"updating totals ...");
     float curCoinValue = 0;
     float curTotalValue = 0.0;
     for (int i = 0; i < kNumRows; i ++) {
@@ -172,48 +123,23 @@
 
 
 #pragma mark - UITextFieldDelegate
-- (void)keyboardDidShow:(NSNotification *)note {
-    [self addButtonToKeyboard];
-}
-
-- (void)addButtonToKeyboard {
-	// create custom button
-	UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	doneButton.frame = CGRectMake(0, 163, 106, 53);
-	doneButton.adjustsImageWhenHighlighted = NO;
-    [doneButton setImage:[UIImage imageNamed:@"DoneUp3.png"] forState:UIControlStateNormal];
-    [doneButton setImage:[UIImage imageNamed:@"DoneDown3.png"] forState:UIControlStateHighlighted];
-	
-	[doneButton addTarget:self action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-	// locate keyboard view
-	UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-	UIView* keyboard;
-	for(int i=0; i<[tempWindow.subviews count]; i++) {
-		keyboard = [tempWindow.subviews objectAtIndex:i];
-		// keyboard found, add the button
-        if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-            [keyboard addSubview:doneButton];
-		
-	}
-}
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     activeTextField = textField;
-    // roeLog(@"{%i}",textField.tag);
+    // roeLog(@"editing: texField %i",textField.tag);
     return YES;
 }
-/*
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 	// the user pressed the "Done" button, so dismiss the keyboard
-	[textField resignFirstResponder];
-    
-    [self updateLabels:textField.tag];
-    // [self saveCollectionData];
+    // roeLog(@"should return");
+    BOOL saved = [self saveCollectionData];
+    if (saved) [self updateCollectionTotalValue];
+    else roeLog(@"NOT saved!");
+    [textField resignFirstResponder];
 	return YES;
 }
-*/
 
 #pragma mark - Tableview Datasource Methods
 
@@ -232,8 +158,11 @@
  *  so cell's state must be reset everytime
  ****/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    roeLog(@"reloading, %i",[indexPath row]);
     int i = [indexPath row];
+    denominationItem *thisItem = (denominationItem *)[denominationItems objectAtIndex:i];
+    // BOOL denominationItemExists = ([thisItem.myCoins count] != 0);
+    
     static NSString *CellIdentifier = @"Cell";
     CollectionItemCell *cell = (CollectionItemCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
  
@@ -244,39 +173,49 @@
 			if ([currentObject isKindOfClass:[UITableViewCell class]]){
 				cell =  (CollectionItemCell *) currentObject;
                 [cell initMe];
-                if (![collectionCells containsObject:cell]) { // the cell is not yet in the array
-                    [collectionCells addObject:cell];
+                /*
+                if (denominationItemExists) {
+                    if ([collectionCells containsObject:cell]) [collectionCells removeObjectAtIndex:i];
+                    [collectionCells insertObject:cell atIndex:i];
                 }
+                */
                 break;
 			}
 		}
     }
-    denominationItem *thisItem = [denominationItems objectAtIndex:i];
+    
     
     [cell.denomLabel setText:[thisItem denominationName]]; // LIKE THIS!!!
-    
-    int curTotalCoins = 0;
-    float curCoinValue = 0;
-    float curTotalValue = 0.0;
+    // roeLog(@" %i) num coins: %i, %@", i, [thisItem.myCoins count], thisItem);
+    // int curTotalCoins = 0;
+    // float curCoinValue = 0;
+    // float curTotalValue = 0.0;
     for (int h = 0; h < thisItem.numCoins; h ++) {
         denominationItem *childCoinItem = (denominationItem *)[thisItem.myCoins objectAtIndex:h];
         
         // set the text for some cell labels & fields
         [[cell.countFields objectAtIndex:h] setText:childCoinItem.numCoinsString]; 
         [[cell.countFields objectAtIndex:h] setDelegate:self];
+        // Tag
+        int thisIndex = childCoinItem.denomIndex;
+        [[cell.countFields objectAtIndex:h] setTag:thisIndex];
+        // roeLog(@"%@: i:%i",childCoinItem.denominationName, thisIndex);
+        
         [[cell.nameLabels objectAtIndex:h] setText:[NSString stringWithFormat: @"%@", childCoinItem.denominationName]]; 
         
         // loop thru the 'sub' coins numbers & sum them
-        curTotalCoins += childCoinItem.numCoins;
+        // curTotalCoins += childCoinItem.numCoins;
         
         // loop the 'sub' coin values & sum them ...
-        curCoinValue = (spotPrice * childCoinItem.silverInOz) + childCoinItem.estimatedMarkup;
-        curTotalValue += curCoinValue;
+        // curCoinValue = (spotPrice * childCoinItem.silverInOz) + childCoinItem.estimatedMarkup;
+        // curTotalValue += curCoinValue;
         
-        [[cell.valueLabels objectAtIndex:h] setText:[NSString stringWithFormat: @"$%.2f", curCoinValue]];
+        [[cell.valueLabels objectAtIndex:h] setText:[NSString stringWithFormat: @"$%.2f", childCoinItem.totalValue]];
+        
+        
     }
-    [cell.countLabel setText:[NSString stringWithFormat:@"%i",curTotalCoins]]; // LIKE THIS!!!
-    [cell.valueLabel setText:[NSString stringWithFormat:@"$%.2f",curTotalValue]]; // LIKE THIS!!!
+    [cell.countLabel setText:[NSString stringWithFormat:@"%i",thisItem.numCoins]]; // LIKE THIS!!!
+    [cell.valueLabel setText:[NSString stringWithFormat:@"$%.2f",thisItem.totalValue]]; // LIKE THIS!!!
     cell.numSubItems = thisItem.numCoins;
     
     return cell;
@@ -285,9 +224,11 @@
 #pragma mark -
 - (void)generateDenominationList
 {
+    // roeLog(@"generating denomination Items array");
     NSArray *coinNames = [NSArray arrayWithObjects:@"$1",@".50¢",@".25¢",@".10¢",@".05¢", nil]; // @"Other",
     int denominationIndices[6] = {100,50,25,10,5,0};
     
+    int savedCoinIndex = 0;
     denominationItems = [[NSMutableArray alloc] init];
     NSMutableArray *currentCoins;
     for (int d = 0; d < kNumRows; d++) {
@@ -309,7 +250,7 @@
             for (int j = 0; j < thisItem.numCoins; j++) {
                 denominationItem *thisCoinItem = [denominationItem alloc];
                 
-                NSString *myCoinCount = [NSString stringWithFormat:@"%@",[coinCounts objectAtIndex:j]];
+                NSString *myCoinCount = [NSString stringWithFormat:@"%@",[coinCounts objectAtIndex:savedCoinIndex]];
                 thisCoinItem.numCoinsString = myCoinCount;
                 thisCoinItem.numCoins = (int)[thisCoinItem.numCoinsString floatValue];
                 
@@ -329,7 +270,8 @@
                 curCoinTotals += thisCoinItem.totalValue;
                 
                 // thisCoinItem.totalValueString = [NSString stringWithFormat:@"$%f",thisCoinItem.totalValue];
-                thisCoinItem.denomIndex = denominationIndices[d]; // 
+                thisCoinItem.denomIndex = savedCoinIndex; // denominationIndices[d]; // 
+                savedCoinIndex++;
                 [thisItem.myCoins addObject:thisCoinItem];
             }   
             
@@ -371,7 +313,7 @@
 #pragma mark - Tableview Delegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // roeLog(@": %@",indexPath);
+    // roeLog(@"selected: %i",indexPath.row);
     
 	// Deselect cell
 	[tableView deselectRowAtIndexPath:indexPath animated:TRUE];

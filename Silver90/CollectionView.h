@@ -35,8 +35,7 @@
 - (BOOL)saveCollectionData;
 - (void)fetchCollectionData;
 
-- (void)updateLabels;
-- (void)addButtonToKeyboard;
+// - (void)addButtonToKeyboard;
 
 - (BOOL)cellIsSelected:(NSIndexPath *)indexPath;
 - (IBAction)doneButtonTouched;
