@@ -79,6 +79,8 @@
 		4C842E35146882B70033E584 /* button25.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C842E32146882B70033E584 /* button25.png */; };
 		4C842E36146882B70033E584 /* button50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C842E33146882B70033E584 /* button50.png */; };
 		4C948A12146B67DA0059A685 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C948A11146B67DA0059A685 /* Coin.m */; };
+		4CAA50D214E4C7E1000C627D /* tableCellBGx300.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA50D114E4C7E1000C627D /* tableCellBGx300.png */; };
+		4CAA50D514E4CA73000C627D /* backButtonArc.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA50D414E4CA73000C627D /* backButtonArc.png */; };
 		4CAF6A3F1470AD7700DD62BC /* coinInfoBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF6A3E1470AD7700DD62BC /* coinInfoBG.png */; };
 		4CBE179A148295940026C80E /* planeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBE1799148295940026C80E /* planeBG.png */; };
 		4CC0823E147EE276005BFA96 /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0823D147EE276005BFA96 /* mainBG.png */; };
@@ -190,6 +192,8 @@
 		4C948A10146B67DA0059A685 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		4C948A11146B67DA0059A685 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		4C948A15146B6CD00059A685 /* roeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roeLog.h; sourceTree = "<group>"; };
+		4CAA50D114E4C7E1000C627D /* tableCellBGx300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableCellBGx300.png; sourceTree = "<group>"; };
+		4CAA50D414E4CA73000C627D /* backButtonArc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButtonArc.png; sourceTree = "<group>"; };
 		4CAF6A3E1470AD7700DD62BC /* coinInfoBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coinInfoBG.png; sourceTree = "<group>"; };
 		4CBE1799148295940026C80E /* planeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeBG.png; sourceTree = "<group>"; };
 		4CC0823D147EE276005BFA96 /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
@@ -285,9 +289,9 @@
 				4C13378C14D5C2AE007C5C48 /* CollectionView.h */,
 				4C13378D14D5C2AE007C5C48 /* CollectionView.m */,
 				4CD210D7146F43840059B3DD /* CoinInfoView.h */,
+				4CD210D8146F43850059B3DD /* CoinInfoView.m */,
 				4C7E35D014DA4C69003B4A30 /* denominationItem.h */,
 				4C7E35D114DA4C69003B4A30 /* denominationItem.m */,
-				4CD210D8146F43850059B3DD /* CoinInfoView.m */,
 				4C11945A1466D6EA00372D20 /* Supporting Files */,
 				4C948A10146B67DA0059A685 /* Coin.h */,
 				4C948A11146B67DA0059A685 /* Coin.m */,
@@ -319,9 +323,11 @@
 		4C1194A91466E48700372D20 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				4CAA50D414E4CA73000C627D /* backButtonArc.png */,
 				4C5DE65714DE55EA00E4E053 /* DoneDown3.png */,
 				4C5DE65814DE55EA00E4E053 /* DoneUp3.png */,
 				4C26F3BE14DD8AFB003E5A97 /* tableCellBG.png */,
+				4CAA50D114E4C7E1000C627D /* tableCellBGx300.png */,
 				4C3EE09A14DAD37B0050DA88 /* doneButton.png */,
 				4C6B530614D82A3A00294E20 /* Default.png */,
 				4C6B530714D82A3A00294E20 /* Default@2x.png */,
@@ -563,6 +569,8 @@
 				4C26F3BF14DD8AFB003E5A97 /* tableCellBG.png in Resources */,
 				4C5DE65914DE55EA00E4E053 /* DoneDown3.png in Resources */,
 				4C5DE65A14DE55EA00E4E053 /* DoneUp3.png in Resources */,
+				4CAA50D214E4C7E1000C627D /* tableCellBGx300.png in Resources */,
+				4CAA50D514E4CA73000C627D /* backButtonArc.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

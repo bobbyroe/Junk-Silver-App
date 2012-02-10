@@ -220,7 +220,7 @@
 {
     roeLog(@"coin index: %i",currentCoinIndex);
     NSString *coinNamed = [NSString stringWithFormat: @"%@", [[currentCoins objectAtIndex:currentCoinIndex] name]];
-    name.text = [coinNamed uppercaseString];
+    name.text = coinNamed; // [coinNamed uppercaseString];
     
     NSString *weightInOz = [NSString stringWithFormat: @"%@oz", [[currentCoins objectAtIndex:currentCoinIndex] netWeightSilverInOz]];
     CGFloat ozsSilver = [weightInOz floatValue];
@@ -241,8 +241,8 @@
 - (void)animateCoinInfoViewOntoScreen:(BOOL) frealz
 {
     CGRect coinInfoViewFrame = coinInfoView.frame;
-    int goalY = -320;
-    if (frealz) goalY = 0;
+    int goalY = -160;
+    if (frealz) goalY = 120;
     coinInfoViewFrame.origin.y = goalY;
     
     [UIView animateWithDuration:0.2 delay:0.0 options: UIViewAnimationCurveEaseOut

@@ -105,7 +105,7 @@
     <percentageCopper>10</percentageCopper>
     <netWeightSilverInOz>0.36169</netWeightSilverInOz>
     <estimatedMarkupOverSpot>2.00</estimatedMarkupOverSpot>
-    <coinTexture>Quarter_Barber.jpg</coinTexture>
+    <coinTexture>Half_Barber.jpg</coinTexture>
   </entry>  
   <entry>
     <name>Liberty</name>
