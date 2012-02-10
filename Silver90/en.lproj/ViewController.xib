@@ -45,7 +45,7 @@
 						<string key="NSFrame">{{0, -10}, {640, 960}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="983637202"/>
+						<reference key="NSNextKeyView" ref="725540553"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -185,16 +185,16 @@
 					<object class="IBUIButton" id="924125304">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{282, 19}, {18, 19}}</string>
+						<string key="NSFrame">{{277, 15}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="933026199"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
+						<float key="IBUIAlpha">0.60000002384185791</float>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<int key="IBUIButtonType">3</int>
 						<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="594931578">
 							<int key="NSColorSpace">3</int>
@@ -207,6 +207,10 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="313824348">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">gear_icon.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="503192615">
 							<int key="type">2</int>
@@ -346,7 +350,7 @@
 						<string key="NSFrame">{{220, 135.5}, {100, 225}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="337801173"/>
+						<reference key="NSNextKeyView" ref="769825825"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<reference key="IBUIBackgroundColor" ref="5084072"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -733,7 +737,7 @@
 								<string key="NSFrame">{{230, 424}, {80, 36}}</string>
 								<reference key="NSSuperview" ref="983637202"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="725540553"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:225</string>
 								<reference key="IBUIBackgroundColor" ref="5084072"/>
 								<bool key="IBUIOpaque">NO</bool>
@@ -856,7 +860,7 @@
 						<string key="NSFrame">{{0, -20}, {320, 480}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="306899518"/>
+						<reference key="NSNextKeyView" ref="337801173"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -922,7 +926,7 @@
 								<string key="NSFrame">{{0, 126}, {320, 333}}</string>
 								<reference key="NSSuperview" ref="337801173"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="983637202"/>
 								<string key="NSReuseIdentifierKey">_NS:418</string>
 								<reference key="IBUIBackgroundColor" ref="5084072"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -977,7 +981,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="769825825"/>
+				<reference key="NSNextKeyView" ref="306899518"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">10</int>
 					<object class="NSImage" key="NSImage">
@@ -6299,6 +6303,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 			<string key="button50.png">{439, 310}</string>
 			<string key="coinInfoBG.png">{640, 640}</string>
 			<string key="collection_button.png">{215, 215}</string>
+			<string key="gear_icon.png">{61, 61}</string>
 			<string key="loading_screen.png">{640, 960}</string>
 			<string key="nextButton.png">{184, 73}</string>
 			<string key="plainBG.jpg">{640, 960}</string>
