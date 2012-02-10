@@ -14,7 +14,7 @@
 {
     NSMutableDictionary *selectedIndexes;
     NSMutableArray *denominationItems;
-    NSMutableArray *collectionCells;
+    // NSMutableArray *collectionCells;
     NSArray *coinCounts;
     
 }

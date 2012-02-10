@@ -10,7 +10,7 @@
 
 @implementation denominationItem
 
-@synthesize numCoins, numCoinsString, denominationName, totalValue, denomIndex, silverInOz, estimatedMarkup; // totalValueString
+@synthesize numCoins, totalCoinCountString, denominationName, totalValue, denomIndex, silverInOz, estimatedMarkup, totalCoinCount; 
 @synthesize myCoins;
 
 @end

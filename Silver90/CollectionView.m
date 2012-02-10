@@ -26,7 +26,6 @@
 }
 
 #pragma mark - touch events
-
 - (IBAction)doneButtonTouched
 {
     [self animateCollectionViewTo:690];
@@ -48,7 +47,6 @@
 }
 
 #pragma mark - save data
-
 - (NSString *)collectionArchivePath
 {
     // App load/save directory: Sandbox/Documents/collection.data
@@ -57,27 +55,40 @@
 
 - (BOOL)saveCollectionData
 {
-    
     int updatedTextFieldIndex = activeTextField.tag;
-    // roeLog(@"saving data ... %i",updatedTextFieldIndex);
+    int curTotalCoins = 0;
+    int curCoinValue = 0;
+    float coinValueTotal;
+    roeLog(@"saving data ... ");
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     int tempArrayIndex = 0;
     // update denominationItems array
     for (int y = 0; y < [denominationItems count]; y ++) {
+        coinValueTotal = 0.0;
         denominationItem *thisItem = (denominationItem *)[denominationItems objectAtIndex:y];
         
         for (int z = 0; z < thisItem.numCoins; z ++) {
             denominationItem *childCoinItem = (denominationItem *)[thisItem.myCoins objectAtIndex:z];
-            NSString *countFieldString = (NSString *)childCoinItem.numCoinsString;
+            NSString *countFieldString = (NSString *)childCoinItem.totalCoinCountString;
             if (tempArrayIndex == updatedTextFieldIndex) { 
                 countFieldString = activeTextField.text;
-                childCoinItem.numCoinsString = countFieldString;
-                childCoinItem.numCoins = (int)[childCoinItem.numCoinsString floatValue];
-                roeLog(@">>> %@: %i",childCoinItem.numCoinsString,childCoinItem.numCoins);
+                childCoinItem.totalCoinCountString = countFieldString;
+                childCoinItem.totalCoinCount = (int)[childCoinItem.totalCoinCountString floatValue];
+                
             }
+            // 
+            curCoinValue = (spotPrice * childCoinItem.silverInOz) + childCoinItem.estimatedMarkup;
+            childCoinItem.totalValue = curCoinValue * childCoinItem.totalCoinCount;
+            coinValueTotal += childCoinItem.totalValue;
+            //
+            curTotalCoins += childCoinItem.totalCoinCount;
+            
             [tempArray addObject:countFieldString];
             tempArrayIndex ++;
+            
         }
+        thisItem.totalValue = coinValueTotal;
+        thisItem.totalCoinCount = curTotalCoins; 
     }
     
     NSArray *collectionData = [NSArray arrayWithArray:tempArray];
@@ -116,6 +127,7 @@
         // loop the 'sub' coin values & sum them ...
         curCoinValue = thisItem.totalValue;
         curTotalValue += curCoinValue;
+        // loop thru sub coins too
     }
     [value setText:[NSString stringWithFormat:@"$%.2f",curTotalValue]];
     [collectionItems reloadData];
@@ -158,7 +170,7 @@
  *  so cell's state must be reset everytime
  ****/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    roeLog(@"reloading, %i",[indexPath row]);
+    // roeLog(@"reloading, %i",[indexPath row]);
     int i = [indexPath row];
     denominationItem *thisItem = (denominationItem *)[denominationItems objectAtIndex:i];
     // BOOL denominationItemExists = ([thisItem.myCoins count] != 0);
@@ -186,15 +198,12 @@
     
     
     [cell.denomLabel setText:[thisItem denominationName]]; // LIKE THIS!!!
-    // roeLog(@" %i) num coins: %i, %@", i, [thisItem.myCoins count], thisItem);
-    // int curTotalCoins = 0;
-    // float curCoinValue = 0;
-    // float curTotalValue = 0.0;
+    
     for (int h = 0; h < thisItem.numCoins; h ++) {
         denominationItem *childCoinItem = (denominationItem *)[thisItem.myCoins objectAtIndex:h];
         
         // set the text for some cell labels & fields
-        [[cell.countFields objectAtIndex:h] setText:childCoinItem.numCoinsString]; 
+        [[cell.countFields objectAtIndex:h] setText:childCoinItem.totalCoinCountString]; 
         [[cell.countFields objectAtIndex:h] setDelegate:self];
         // Tag
         int thisIndex = childCoinItem.denomIndex;
@@ -203,19 +212,13 @@
         
         [[cell.nameLabels objectAtIndex:h] setText:[NSString stringWithFormat: @"%@", childCoinItem.denominationName]]; 
         
-        // loop thru the 'sub' coins numbers & sum them
-        // curTotalCoins += childCoinItem.numCoins;
-        
-        // loop the 'sub' coin values & sum them ...
-        // curCoinValue = (spotPrice * childCoinItem.silverInOz) + childCoinItem.estimatedMarkup;
-        // curTotalValue += curCoinValue;
-        
-        [[cell.valueLabels objectAtIndex:h] setText:[NSString stringWithFormat: @"$%.2f", childCoinItem.totalValue]];
-        
-        
+        [[cell.valueLabels objectAtIndex:h] setText:[NSString stringWithFormat: @"$%.2f", childCoinItem.totalValue]];        
     }
-    [cell.countLabel setText:[NSString stringWithFormat:@"%i",thisItem.numCoins]]; // LIKE THIS!!!
+    
+    [cell.countLabel setText:[NSString stringWithFormat:@"%i",thisItem.totalCoinCount]]; // LIKE THIS!!!
     [cell.valueLabel setText:[NSString stringWithFormat:@"$%.2f",thisItem.totalValue]]; // LIKE THIS!!!
+    // roeLog(@"%@ %@",[cell.countLabel text],[cell.valueLabel text]);
+    
     cell.numSubItems = thisItem.numCoins;
     
     return cell;
@@ -245,19 +248,18 @@
         thisItem.myCoins = [NSMutableArray arrayWithCapacity:thisItem.numCoins];
         float curCoinValue = 0.0;
         float curCoinTotals = 0.0;
+        int totalCoinCount = 0;
         if (thisItem.numCoins > 0) {
             
             for (int j = 0; j < thisItem.numCoins; j++) {
                 denominationItem *thisCoinItem = [denominationItem alloc];
                 
                 NSString *myCoinCount = [NSString stringWithFormat:@"%@",[coinCounts objectAtIndex:savedCoinIndex]];
-                thisCoinItem.numCoinsString = myCoinCount;
-                thisCoinItem.numCoins = (int)[thisCoinItem.numCoinsString floatValue];
+                thisCoinItem.totalCoinCountString = myCoinCount;
+                thisCoinItem.totalCoinCount = (int)[thisCoinItem.totalCoinCountString floatValue];
+                totalCoinCount += thisCoinItem.totalCoinCount;
                 
                 thisCoinItem.denominationName = [NSString stringWithFormat: @"%@", [[currentCoins objectAtIndex:j] name]];
-                
-                //
-                // roeLog(@" %@, %i",thisCoinItem.denominationName,thisCoinItem.numCoins); //***
                 
                 NSString *ozSilverString = [NSString stringWithFormat: @"%@",[[currentCoins objectAtIndex:j] netWeightSilverInOz]];
                 thisCoinItem.silverInOz = [ozSilverString floatValue];
@@ -266,10 +268,9 @@
                 thisCoinItem.estimatedMarkup = [estMarkupString floatValue];
              
                 curCoinValue = (spotPrice * thisCoinItem.silverInOz) + thisCoinItem.estimatedMarkup;
-                thisCoinItem.totalValue = curCoinValue * thisCoinItem.numCoins;
+                thisCoinItem.totalValue = curCoinValue * thisCoinItem.totalCoinCount;
                 curCoinTotals += thisCoinItem.totalValue;
                 
-                // thisCoinItem.totalValueString = [NSString stringWithFormat:@"$%f",thisCoinItem.totalValue];
                 thisCoinItem.denomIndex = savedCoinIndex; // denominationIndices[d]; // 
                 savedCoinIndex++;
                 [thisItem.myCoins addObject:thisCoinItem];
@@ -278,6 +279,10 @@
             thisItem.denominationName = [NSString stringWithFormat: @"%@", [coinNames objectAtIndex:d]];
             
             thisItem.denomIndex = denominationIndices[d];
+            
+            thisItem.totalCoinCount = totalCoinCount;
+            thisItem.totalCoinCountString = [NSString stringWithFormat:@"%i",thisItem.totalCoinCount];
+            // roeLog(@"%@: %i",thisItem.denominationName, totalCoinCount);
         } 
 
         thisItem.denominationName = [NSString stringWithString:[coinNames objectAtIndex:d]];
