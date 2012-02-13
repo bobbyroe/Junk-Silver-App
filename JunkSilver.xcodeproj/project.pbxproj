@@ -107,6 +107,7 @@
 		4CD8FDFE14D7A98100D0414D /* JunkCoins2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDFD14D7A98100D0414D /* JunkCoins2.xml */; };
 		4CD8FE0014D7BECC00D0414D /* button05.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FDFF14D7BECC00D0414D /* button05.png */; };
 		4CD8FE0214D7BEEF00D0414D /* button05.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FE0114D7BEEF00D0414D /* button05.png */; };
+		4CDF2CA014E63AAE009BBA0F /* Dollar_Peace_normals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CDF2C9F14E63AAE009BBA0F /* Dollar_Peace_normals.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +228,7 @@
 		4CD8FDFD14D7A98100D0414D /* JunkCoins2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = JunkCoins2.xml; sourceTree = "<group>"; };
 		4CD8FDFF14D7BECC00D0414D /* button05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button05.png; sourceTree = "<group>"; };
 		4CD8FE0114D7BEEF00D0414D /* button05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button05.png; sourceTree = "<group>"; };
+		4CDF2C9F14E63AAE009BBA0F /* Dollar_Peace_normals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dollar_Peace_normals.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 		4C1194FC1467037700372D20 /* normals */ = {
 			isa = PBXGroup;
 			children = (
+				4CDF2C9F14E63AAE009BBA0F /* Dollar_Peace_normals.jpg */,
 				4C1194FD1467037700372D20 /* Dime_Barber_NRM.png */,
 				4C1194FE1467037700372D20 /* Dime_Mercury_NRM.png */,
 				4C1194FF1467037700372D20 /* dime_Roosevelt_NRM.png */,
@@ -579,6 +582,7 @@
 				4CAA50D514E4CA73000C627D /* backButtonArc.png in Resources */,
 				4C480CBE14E55608002FF491 /* expandButton.png in Resources */,
 				4C480CBF14E55608002FF491 /* gear_icon.png in Resources */,
+				4CDF2CA014E63AAE009BBA0F /* Dollar_Peace_normals.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

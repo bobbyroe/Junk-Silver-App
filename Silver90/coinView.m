@@ -89,10 +89,11 @@
         NGLMesh *curMesh = [[NGLMesh alloc] initWithOBJFile:coinObj setProperties:settings];
         curMesh.rotateX = 90;
         curMesh.x = i * 0.7;
-        NGLMaterial *material = [NGLMaterial materialPewter];
+        NGLMaterial *material = [NGLMaterial materialChrome]; // materialPewter];
         material.diffuseMap = [NGLTexture texture2DWithFile:coinTex]; //@"dollar_Peace.jpg"]; // 
-        // material.bumpMap = [NGLTexture texture2DWithFile:@"dollar_Peace_NRM.png"];
+        // material.bumpMap = [NGLTexture texture2DWithFile:@"Dollar_Peace_normals.jpg"];
         material.specularColor = nglColorMake(0.3, 0.3, 0.3, 1.0);
+        
         curMesh.material = material;
         [curMesh compileCoreMesh];
         [currentMeshes addObject:curMesh];
