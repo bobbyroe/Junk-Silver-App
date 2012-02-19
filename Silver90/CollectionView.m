@@ -248,8 +248,10 @@
         thisItem.myCoins = [NSMutableArray arrayWithCapacity:thisItem.numCoins];
         float curCoinValue = 0.0;
         float curCoinTotals = 0.0;
-        int totalCoinCount = 0;
+        int totalCoinCount;
         if (thisItem.numCoins > 0) {
+            
+            totalCoinCount = 0;
             
             for (int j = 0; j < thisItem.numCoins; j++) {
                 denominationItem *thisCoinItem = [denominationItem alloc];

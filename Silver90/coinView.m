@@ -89,10 +89,15 @@
         NGLMesh *curMesh = [[NGLMesh alloc] initWithOBJFile:coinObj setProperties:settings];
         curMesh.rotateX = 90;
         curMesh.x = i * 0.7;
-        NGLMaterial *material = [NGLMaterial materialChrome]; // materialPewter];
+        NGLMaterial *material = [NGLMaterial materialChrome]; // materialChrome materialPewter];
         material.diffuseMap = [NGLTexture texture2DWithFile:coinTex]; //@"dollar_Peace.jpg"]; // 
-        // material.bumpMap = [NGLTexture texture2DWithFile:@"Dollar_Peace_normals.jpg"];
-        material.specularColor = nglColorMake(0.3, 0.3, 0.3, 1.0);
+        // material.ambientColor = nglColorMake(1.0, 1.0, 1.0, 1.0);
+        // material.ambientMap = [NGLTexture texture2DWithFile:coinTex]; //@"dollar_Peace.jpg"]; // 
+        // material.bumpMap = [NGLTexture texture2DWithFile:@"z_testMap2.jpg"]; // @"Dollar_Peace_normals.jpg"];
+        // material.reflectiveMap = [NGLTexture texture2DWithFile:@"Utah.jpg"];
+        // material.reflectiveLevel = 1.0;
+        material.shininess = 1000.0;
+        // material.specularColor = nglColorMake(0.3, 0.3, 0.3, 1.0);
         
         curMesh.material = material;
         [curMesh compileCoreMesh];
@@ -161,11 +166,11 @@
     goalPos.x -= (goalPos.x - position.x) * 0.1;
     goalPos.y -= (goalPos.y - position.y) * 0.1;
     
-    for (int i = 0; i < numMeshes; i++) {
-        NGLMesh *aMesh = [currentMeshes objectAtIndex:i];
+    // for (int i = 0; i < numMeshes; i++) {
+        NGLMesh *aMesh = [currentMeshes objectAtIndex:currentCoinIndex]; // i];
         aMesh.rotateX -= -goalPos.y;
-        aMesh.rotateZ -= goalPos.x;
-    }
+        // aMesh.rotateZ -= goalPos.x;
+    // }
     
 	// mesh.rotateX -= -goalPos.y;
 	// mesh.rotateZ -= goalPos.x;
@@ -219,7 +224,7 @@
 
 - (void)updateLabels
 {
-    roeLog(@"coin index: %i",currentCoinIndex);
+    // roeLog(@"coin index: %i",currentCoinIndex);
     NSString *coinNamed = [NSString stringWithFormat: @"%@", [[currentCoins objectAtIndex:currentCoinIndex] name]];
     name.text = coinNamed; // [coinNamed uppercaseString];
     
