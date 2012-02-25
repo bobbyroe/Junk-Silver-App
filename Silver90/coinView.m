@@ -92,12 +92,16 @@
         NGLMaterial *material = [NGLMaterial materialChrome]; // materialChrome materialPewter];
         material.diffuseMap = [NGLTexture texture2DWithFile:coinTex]; //@"dollar_Peace.jpg"]; // 
         // material.ambientColor = nglColorMake(1.0, 1.0, 1.0, 1.0);
+        /*
+        if ([coinTex isEqualToString:@"dollar_Peace.jpg"]) {
+            material.bumpMap = [NGLTexture texture2DWithFile:@"Dollar_Peace_normals.jpg"];
+        }
+        */
         // material.ambientMap = [NGLTexture texture2DWithFile:coinTex]; //@"dollar_Peace.jpg"]; // 
-        // material.bumpMap = [NGLTexture texture2DWithFile:@"z_testMap2.jpg"]; // @"Dollar_Peace_normals.jpg"];
         // material.reflectiveMap = [NGLTexture texture2DWithFile:@"Utah.jpg"];
         // material.reflectiveLevel = 1.0;
-        material.shininess = 1000.0;
-        // material.specularColor = nglColorMake(0.3, 0.3, 0.3, 1.0);
+        // material.shininess = 1000.0;
+        material.specularColor = nglColorMake(1.0, 1.0, 1.0, 1.0);
         
         curMesh.material = material;
         [curMesh compileCoreMesh];

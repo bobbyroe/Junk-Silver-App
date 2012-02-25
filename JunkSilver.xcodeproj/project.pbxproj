@@ -18,7 +18,6 @@
 		4C11946A1466D6EA00372D20 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194681466D6EA00372D20 /* ViewController.xib */; };
 		4C1194871466DBDD00372D20 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194861466DBDD00372D20 /* OpenGLES.framework */; };
 		4C11948A1466DBE200372D20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1194891466DBE200372D20 /* QuartzCore.framework */; };
-		4C11948C1466DBF300372D20 /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C11948B1466DBF300372D20 /* NinevehGL.framework */; };
 		4C1194B31466E48700372D20 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AC1466E48700372D20 /* Default.png */; };
 		4C1194B41466E48700372D20 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AD1466E48700372D20 /* Default@2x.png */; };
 		4C1194B51466E48700372D20 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1194AE1466E48700372D20 /* icon114x114.png */; };
@@ -68,6 +67,7 @@
 		4C480CBF14E55608002FF491 /* gear_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C480CBD14E55608002FF491 /* gear_icon.png */; };
 		4C5DE65914DE55EA00E4E053 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE65714DE55EA00E4E053 /* DoneDown3.png */; };
 		4C5DE65A14DE55EA00E4E053 /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE65814DE55EA00E4E053 /* DoneUp3.png */; };
+		4C63D00814F6752700622590 /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C63D00714F6752700622590 /* NinevehGL.framework */; };
 		4C6B530214D825FD00294E20 /* collection_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530114D825FD00294E20 /* collection_button.png */; };
 		4C6B530514D828B100294E20 /* plainBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530414D828B100294E20 /* plainBG.jpg */; };
 		4C6B530814D82A3A00294E20 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B530614D82A3A00294E20 /* Default.png */; };
@@ -129,7 +129,6 @@
 		4C1194691466D6EA00372D20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		4C1194861466DBDD00372D20 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4C1194891466DBE200372D20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4C11948B1466DBF300372D20 /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NinevehGL.framework; path = "!Bobby/iOS/NinevehGL_Beta/NinevehGL.framework"; sourceTree = DEVELOPER_DIR; };
 		4C1194AC1466E48700372D20 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4C1194AD1466E48700372D20 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4C1194AE1466E48700372D20 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114x114.png; sourceTree = "<group>"; };
@@ -182,6 +181,7 @@
 		4C480CBD14E55608002FF491 /* gear_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_icon.png; sourceTree = "<group>"; };
 		4C5DE65714DE55EA00E4E053 /* DoneDown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown3.png; sourceTree = "<group>"; };
 		4C5DE65814DE55EA00E4E053 /* DoneUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3.png; sourceTree = "<group>"; };
+		4C63D00714F6752700622590 /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NinevehGL.framework; path = /Library/NinevehGL/NinevehGL.framework; sourceTree = "<absolute>"; };
 		4C6B530114D825FD00294E20 /* collection_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection_button.png; sourceTree = "<group>"; };
 		4C6B530414D828B100294E20 /* plainBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plainBG.jpg; sourceTree = "<group>"; };
 		4C6B530614D82A3A00294E20 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -238,9 +238,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C63D00814F6752700622590 /* NinevehGL.framework in Frameworks */,
 				4CD65F381490787900E99AD6 /* AudioToolbox.framework in Frameworks */,
 				4CD4A9C51481F62800541E71 /* SystemConfiguration.framework in Frameworks */,
-				4C11948C1466DBF300372D20 /* NinevehGL.framework in Frameworks */,
 				4C11948A1466DBE200372D20 /* QuartzCore.framework in Frameworks */,
 				4C1194871466DBDD00372D20 /* OpenGLES.framework in Frameworks */,
 				4C1194541466D6EA00372D20 /* UIKit.framework in Frameworks */,
@@ -272,9 +272,9 @@
 		4C1194521466D6EA00372D20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C63D00714F6752700622590 /* NinevehGL.framework */,
 				4CD65F371490787900E99AD6 /* AudioToolbox.framework */,
 				4CD4A9C41481F62800541E71 /* SystemConfiguration.framework */,
-				4C11948B1466DBF300372D20 /* NinevehGL.framework */,
 				4C1194891466DBE200372D20 /* QuartzCore.framework */,
 				4C1194861466DBDD00372D20 /* OpenGLES.framework */,
 				4C1194531466D6EA00372D20 /* UIKit.framework */,
@@ -687,6 +687,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/!Bobby/iOS/NinevehGL_Beta\"",
+					"\"$(LOCAL_LIBRARY_DIR)/NinevehGL\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Silver90/JunkSilver-Prefix.pch";
@@ -703,6 +704,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/!Bobby/iOS/NinevehGL_Beta\"",
+					"\"$(LOCAL_LIBRARY_DIR)/NinevehGL\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Silver90/JunkSilver-Prefix.pch";
